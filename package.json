@@ -1,0 +1,23 @@
+{
+  "name": "shadcn-registry-lab",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.30.1",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "ds": "node src/cli.ts",
+    "demo": "node src/demo.ts",
+    "test": "node --test test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "pnpm typecheck && pnpm test"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "shadcn": "4.21.0",
+    "typescript": "^5.9.0"
+  }
+}
+
