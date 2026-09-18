@@ -4,6 +4,8 @@ A prototype for tracking shadcn component source while allowing local customizat
 
 The experiment asks whether developers and coding agents can distinguish upstream code, local edits, and recorded customizations. A TypeScript CLI checks retained installation baselines without an LLM or network connection. It is not a production package manager.
 
+The intended consuming architecture is Module Federation with React microfrontends in the same page. Consumer customization is intentional. The current implementation is still the CLI experiment; the [host integration plan](plans/1789755844--9-18-2:24pm--evaluate-module-federation-integration.md) describes the next evaluation.
+
 ## Run it
 
 Requires Node 24+, pnpm 10.30.1, and Git. Tool versions are declared in .tool-versions and package.json.

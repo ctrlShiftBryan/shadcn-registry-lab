@@ -4,7 +4,7 @@ Research date: September 18, 2026.
 
 Recommendation: retain the existing shadcn registry during the microfrontend transition if consumer ownership and adaptation are intended. Do not migrate the whole library solely because a shared host is being introduced. Prefer package distribution for centrally maintained components when teams should consume their behavior unchanged and rapid, auditable upgrades matter more than editing their source.
 
-This is an architectural recommendation based on the supplied context and official documentation, not a review of the company's implementation. The integration technology, Tailwind version, permitted component modifications, and phrase "heavily using no npm packages" remain unconfirmed. The same-page guidance below assumes shared DOM composition. Iframes need separate theme delivery and communication decisions.
+This is an architectural recommendation based on the supplied context and official documentation, not a review of the company's implementation. The host is confirmed to use Module Federation in the same page. Consumer customization and contribution are intended benefits of registry distribution. The bundler/plugin, Tailwind version, React root arrangement, and existing npm usage remain unconfirmed. See the [Module Federation evaluation plan](../../plans/1789755844--9-18-2:24pm--evaluate-module-federation-integration.md).
 
 ## Separate the decisions
 
@@ -72,4 +72,3 @@ A useful decision test is an accessibility fix to a dialog after several teams h
 Use a host and two independently built remotes. Install the current design system in both, deliberately keep one on the previous supported component revision, and change mount order. Exercise theme changes, dialogs, menus, a shared provider where applicable, standalone development, remote rollback, and a source update with one local modification.
 
 Measure compressed JavaScript/CSS, loading and interaction behavior, update effort, and rollback independence. Compare a package build of only the relevant components if the registry experiment exposes a specific problem. No benchmark or implementation test was run during this research.
-
